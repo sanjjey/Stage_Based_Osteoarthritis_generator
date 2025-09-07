@@ -4,7 +4,10 @@ This project utilizes a Conditional Generative Adversarial Network (cGAN) to gen
 
 Additionally, the project includes an advanced application that can take a real-world X-ray of a healthy knee and generate a plausible future progression of the disease for that specific individual.
 
+![Showcase of generated X-ray images](https://github.com/sanjjey/Stage_Based_Osteoarthritis_generator/blob/main/assets/progression_result.png?raw=true)
+*An example of the model generating a 5-stage progression from a single input image.*
 
+---
 
 ## 📜 Table of Contents
 
@@ -16,7 +19,6 @@ Additionally, the project includes an advanced application that can take a real-
 - [Usage](#-usage)
   - [1. Training the Model](#1-training-the-model)
   - [2. Generating Progression from a Real Image](#2-generating-progression-from-a-real-image)
-- [Results](#-results)
 - [Technologies Used](#-technologies-used)
 
 ---
@@ -64,8 +66,8 @@ This project uses the **Osteoarthritis Initiative (OAI) Dataset**, which is a la
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone [https://github.com/sanjjey/Stage_Based_Osteoarthritis_generator.git](https://github.com/sanjjey/Stage_Based_Osteoarthritis_generator.git)
+    cd Stage_Based_Osteoarthritis_generator
     ```
 
 2.  **Install the required libraries:**
@@ -89,23 +91,10 @@ There are two main parts to this project: training the model and using the train
 
 ### 2. Generating Progression from a Real Image
 
--   Use the second Jupyter notebook provided (the application notebook).
+-   Use the second Jupyter notebook for the application (e.g., `Application.ipynb`).
 -   **Important**: Update the `checkpoint_path` variable to point to your saved generator model (e.g., `./results/checkpoint_epoch_500.pth`).
 -   Update the `input_image_path` to the location of a healthy (Stage 0) knee X-ray you want to use as input.
 -   Run the cells. The code will perform an optimization process called **Latent Space Projection** to find the "seed" corresponding to your image and then generate the 5-stage progression.
-
----
-
-## 📊 Results
-
-The trained model is capable of generating highly realistic and conditionally accurate X-ray images.
-
--   **Random Generation**: The model can generate diverse and plausible knee X-rays for any stage and side combination.
--   **Progression Generation**: The image-to-image application successfully preserves the anatomical identity of the input knee while realistically adding features of osteoarthritis, such as decreasing joint space and osteophyte formation.
-
-| Your Input Image | Generated Stage 0 | Generated Stage 1 | Generated Stage 2 | Generated Stage 3 | Generated Stage 4 |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| [Real X-ray] | [Generated X-ray] | [Generated X-ray] | [Generated X-ray] | [Generated X-ray] | [Generated X-ray] |
 
 ---
 
